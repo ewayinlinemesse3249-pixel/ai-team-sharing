@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="260" viewBox="0 0 1200 260">
+  <rect width="1200" height="260" fill="#fafaf8"/>
+  <g font-family="Inter, Helvetica, Arial, sans-serif">
+    <g transform="translate(24 24)">
+      <rect width="264" height="212" fill="#0a0a0a"/>
+      <circle cx="62" cy="74" r="34" fill="#002FA7"/>
+      <text x="62" y="86" text-anchor="middle" font-size="36" font-weight="300" fill="#fff">A</text>
+      <text x="28" y="150" font-size="30" font-weight="300" fill="#fff">Antigravity</text>
+      <text x="28" y="184" font-size="14" letter-spacing="4" fill="#a3a3a3">AI IDE</text>
+    </g>
+    <g transform="translate(312 24)">
+      <rect width="264" height="212" fill="#f0f0ee" stroke="#d4d4d2"/>
+      <circle cx="62" cy="74" r="34" fill="#0a0a0a"/>
+      <text x="62" y="86" text-anchor="middle" font-size="36" font-weight="300" fill="#fff">Q</text>
+      <text x="28" y="150" font-size="30" font-weight="300" fill="#0a0a0a">Qoder</text>
+      <text x="28" y="184" font-size="14" letter-spacing="4" fill="#737373">AI IDE</text>
+    </g>
+    <g transform="translate(600 24)">
+      <rect width="264" height="212" fill="#002FA7"/>
+      <circle cx="62" cy="74" r="34" fill="#fff"/>
+      <text x="62" y="86" text-anchor="middle" font-size="36" font-weight="300" fill="#002FA7">W</text>
+      <text x="28" y="150" font-size="30" font-weight="300" fill="#fff">WorkBuddy</text>
+      <text x="28" y="184" font-size="14" letter-spacing="4" fill="#dce4ff">AI IDE</text>
+    </g>
+    <g transform="translate(888 24)">
+      <rect width="264" height="212" fill="#f0f0ee" stroke="#d4d4d2"/>
+      <circle cx="62" cy="74" r="34" fill="#ff5a3c"/>
+      <text x="62" y="86" text-anchor="middle" font-size="36" font-weight="300" fill="#fff">T</text>
+      <text x="28" y="150" font-size="30" font-weight="300" fill="#0a0a0a">Trae</text>
+      <text x="28" y="184" font-size="14" letter-spacing="4" fill="#737373">AI IDE</text>
+    </g>
+  </g>
+</svg>
