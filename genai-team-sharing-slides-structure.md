@@ -433,7 +433,7 @@ Prompt 更像一次性口头交代，skill 更像可复用能力封装。Prompt 
 
 ### 实现备注
 
-已完成。参考本地 Playwright Demo 项目的 `README.md`、微软官方 `playwright-cli` 和 GitHub `spec-kit`。
+已完成。参考演示项目 README、微软官方 `playwright-cli` 和 GitHub `spec-kit`。
 
 ---
 
