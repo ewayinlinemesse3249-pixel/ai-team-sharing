@@ -447,7 +447,7 @@ Prompt 更像一次性口头交代，skill 更像可复用能力封装。Prompt 
 
 使用真实 Playwright Demo 项目截图，展示工程目录、spec 文档、生成的测试文件和 Agent 执行终端。页面用三个结果说明项目已经从提示词进入工程交付：
 
-1. spec-driven 产物：spec / plan / tasks / research
+1. spec-driven 产物：constitution / spec / clarify / plan / tasks / implement
 2. 12 个 Playwright 测试，覆盖主要 TodoMVC 场景
 3. 截图、Trace 和 GitHub Actions CI
 
