@@ -7,7 +7,8 @@
 ## 当前状态
 
 - 网页 PPT 路径：`drafts/ai-team-sharing/ppt-swiss/index.html`
-- 当前已完成：19 页
+- 公开资料索引：`drafts/ai-team-sharing/resources.md`
+- 当前已完成：21 页
 - 视觉方向：瑞士国际主义，IKB 蓝作为单一强调色
 - 分享定位：工程师团队入门，不做工具清单，重点讲工作方式
 
@@ -23,7 +24,7 @@
 2. Chat 模式的三类短板：问题闭环、上下文供给、知识沉淀
 3. Claude Code / Codex 的定位：AI Coding Agent
 4. Prompt 和 skill 的差别：一次性指令 vs 可复用能力
-5. 三个现场案例：手绘 UI 到前端页面、复杂项目 spec-driven 工作流、RTM Excel 到 Jira CSV
+5. 两个现场案例：Playwright 工程化 UI 测试、RTM Excel 到 Jira CSV
 
 ---
 
@@ -381,36 +382,7 @@ Prompt 更像一次性口头交代，skill 更像可复用能力封装。Prompt 
 
 ---
 
-## 第 17 页：案例一：手绘 UI → AI 头版新闻页
-
-### 页面标题
-
-案例一：手绘 UI → AI 头版新闻页
-
-### 核心内容
-
-用一张手绘 UI 草图作为输入，让 AI 识别页面结构，生成一个可运行的前端页面，再填入当天 AI 头版新闻。
-
-流程是：
-
-1. 让 AI 读懂草图结构
-2. 生成可运行页面
-3. 填入当天 AI 头版新闻
-4. 运行、截图、再改
-
-### 这一页想讲什么
-
-展示 agent 从不完整输入到可运行产物的能力。这个案例适合现场演示，因为它不是纯聊天，而是完整经历“理解、生成、验证、迭代”。
-
-### 实现备注
-
-已完成。使用手绘图：
-
-`drafts/ai-team-sharing/ppt-swiss/images/shouhui-UI.png`
-
----
-
-## 第 18 页：复杂项目，不要让 AI 直接开写
+## 第 17 页：案例一：复杂项目，不要让 AI 直接开写
 
 ### 页面标题
 
@@ -437,11 +409,63 @@ Prompt 更像一次性口头交代，skill 更像可复用能力封装。Prompt 
 
 ---
 
-## 第 19 页：案例三：RTM Excel → JIRA CSV
+## 第 18 页：案例一：AI 自动生成并维护 UI 测试
 
 ### 页面标题
 
-案例三： RTM Excel → JIRA CSV
+案例一：AI 自动生成并维护 UI 测试
+
+### 核心内容
+
+用一段精简提示词启动任务：阅读微软官方 `playwright-cli` 与 `github/spec-kit`，创建工程化 TodoMVC UI 测试项目；先产出 spec / plan / tasks，再由 Playwright CLI 生成、运行和修复测试；交付 README、AGENTS.md、截图 / Trace 与 CI。任务分阶段执行，只在权限、破坏性操作或关键方案取舍时暂停。
+
+页面展示三类工具的职责分工：
+
+1. `spec-kit` 管 what：把需求沉淀成 constitution、spec、plan 和 tasks
+2. `playwright-cli` 管 how：探索页面、生成操作代码、连接失败现场
+3. `@playwright/test` 管 run：批量执行断言，输出截图和 Trace，并接入 CI
+
+工程流程是 `Specify → Generate → Run → Heal`。最终项目包含 12 个测试、12 张成功截图、Playwright 配置、CI 工作流和 Agent 指引。
+
+### 这一页想讲什么
+
+复杂项目的工程价值来自中间产物和验证闭环。Agent 不只生成测试代码，还能按照规格运行、诊断失败，并区分测试漂移和产品回归。
+
+### 实现备注
+
+已完成。参考本地 Playwright Demo 项目的 `README.md`、微软官方 `playwright-cli` 和 GitHub `spec-kit`。
+
+---
+
+## 第 19 页：案例一证据：从 Prompt 到测试工程
+
+### 页面标题
+
+从 Prompt 到测试工程
+
+### 核心内容
+
+使用真实 Playwright Demo 项目截图，展示工程目录、spec 文档、生成的测试文件和 Agent 执行终端。页面用三个结果说明项目已经从提示词进入工程交付：
+
+1. spec-driven 产物：spec / plan / tasks / research
+2. 12 个 Playwright 测试，覆盖主要 TodoMVC 场景
+3. 截图、Trace 和 GitHub Actions CI
+
+### 这一页想讲什么
+
+第 18 页讲工作流，第 19 页给证据。AI 最终交付的是一个可运行、可验证、可继续维护的测试项目。
+
+### 实现备注
+
+已完成。原图为 `ppt-swiss/images/playwright-demo.png`，展示使用居中裁切的 `ppt-swiss/images/19-playwright-evidence-21x9.png`，原始截图未覆盖。
+
+---
+
+## 第 20 页：案例二：RTM Excel → JIRA CSV
+
+### 页面标题
+
+案例二：RTM Excel → JIRA CSV
 
 ### 核心内容
 
@@ -457,62 +481,32 @@ Prompt 更像一次性口头交代，skill 更像可复用能力封装。Prompt 
 
 ### 这一页想讲什么
 
-用一个真实的数据转换任务说明：长 prompt 不是终点。它可以被提炼成稳定规则，再沉淀成 skill，让下次同类任务少重来一遍。
+长 prompt 可以继续提炼成稳定规则和 skill，让同类任务从一次性执行变成可复用能力。
 
 ### 实现备注
 
-已完成。参考 `drafts/ai-team-sharing/real-prompt-sample.md`，页面已脱敏。
+已恢复原版页面。参考 `drafts/ai-team-sharing/real-prompt-sample.md`，页面已脱敏。
 
 ---
 
-## 第 20 页：待定收束页
+## 第 21 页：把 AI 接进真实工作
 
 ### 页面标题
 
-待定
+把 AI 接进真实工作
 
 ### 候选方向
 
-可以把三个案例收束成一条工作方法：从 prompt 到 skill，从一次性任务到可复用系统。
+用三件长期有效的事收束整套分享：
+
+1. 上下文供给：让 AI 读到代码、约束和历史，理解真实工作环境
+2. 反馈闭环：让 AI 执行、验证、发现问题，并根据结果继续修正
+3. Skill 沉淀：把跑通的方法写成可复用资产，让下一次协作更高效
 
 ### 这一页想讲什么
 
-把手绘 UI、spec-kit 工作流、RTM 转 CSV 三个案例串起来，回到分享主线：工程师要构建的是行动系统，不是工具清单。
+工程师真正要建立的是一套能执行、能验证、能积累的 AI 工作方式。页面用“工具会变，方法会留下”完成收束。
 
----
+### 实现备注
 
-## 第 21 页：待定行动建议
-
-### 页面标题
-
-待定
-
-### 候选方向
-
-给团队一个低门槛起步动作：选一个真实任务，用 agent 跑完整闭环，再把有效过程写成 skill。
-
-### 这一页想讲什么
-
-让分享落到行动，不停在概念认同。
-
----
-
-## 第 22 页：待定结束页
-
-### 页面标题
-
-待定
-
-### 候选方向
-
-可以用一句收束判断：未来属于能编排 AI 的工程师。
-
-### 这一页想讲什么
-
-结束时不再堆工具名，而是留下一个清晰方向：理解机制，接入环境，建立闭环，沉淀资产。
-
----
-
-## 后续制作建议
-
-第 20-22 页建议围绕“收束”和“行动”处理，不再新增太多工具信息。当前 19 页已经覆盖原理、chat 短板、agent 工具、prompt/skill 和 3 个案例，后面应该帮助听众把这些内容整理成一套可执行方法。
+已完成。使用瑞士风 IKB 左右分屏收束页，与封面形成首尾呼应；整套 PPT 在第 21 页结束。
